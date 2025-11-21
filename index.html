@@ -2,197 +2,166 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Obrigado pela Compra!</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&display=swap" rel="stylesheet">
   <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
     body {
       font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff0f3;
-      text-align: center;
-      color: #333;
+      background: linear-gradient(135deg, #ff9eb8 0%, #ff6ba8 50%, #ff1f5f 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 10px;
+      color: #fff;
     }
-    .container {
-      max-width: 500px;
-      margin: 0 auto;
-      padding: 2rem;
+    .card {
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 28px;
+      padding: 40px 24px 44px;
+      max-width: 420px;
+      width: 92%;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(255,31,95,0.25);
+      border: 1px solid rgba(255,255,255,0.2);
     }
     .circle-img {
-      width: 120px;
-      height: 120px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
-      border: 4px solid #ff758f;
-      margin: 0 auto 1rem auto;
-      display: block;
       object-fit: cover;
+      margin: 0 auto 24px;
+      border: 5px solid #fff;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     }
-    h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
-    p { font-size: 1rem; margin-bottom: 1.5rem; }
+    h1 {
+      font-size: 28px;
+      font-weight: 900;
+      margin-bottom: 12px;
+      background: linear-gradient(90deg, #ffffff, #ffecd2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p {
+      font-size: 17px;
+      line-height: 1.5;
+      margin-bottom: 28px;
+      opacity: 0.95;
+    }
     .btn {
-      background: #229ED9;
-      color: #fff;
-      padding: 0.8rem 1.6rem;
+      display: block;
+      background: #fff;
+      color: #ff1f5f;
+      font-size: 20px;
+      font-weight: 900;
       text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      display: inline-block;
-      margin-top: 1rem;
-      transition: 0.2s ease;
+      padding: 18px;
+      border-radius: 50px;
+      margin: 0 auto;
+      width: 88%;
+      box-shadow: 0 12px 30px rgba(255,31,95,0.4);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
     }
-    .btn:hover { filter: brightness(1.1); }
+    .btn::before {
+      content: ''; position: absolute; top: 50%; left: 50%;
+      width: 0; height: 0; background: rgba(255,255,255,0.3);
+      border-radius: 50%; transform: translate(-50%,-50%);
+      transition: width 0.6s, height 0.6s;
+    }
+    .btn:active::before { width: 300px; height: 300px; }
+    .btn:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(255,31,95,0.5); }
+    .btn span { position: relative; z-index: 2; }
+    .footer { margin-top: 30px; font-size: 13px; opacity: 0.8; }
   </style>
 
-  <!-- TikTok Pixel Code Start (NOVO PIXEL) -->
+  <!-- NOVO PIXEL CORRETO -->
   <script>
     !function (w, d, t) {
-      w.TiktokAnalyticsObject=t;
-      var ttq=w[t]=w[t]||[];
-      ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"];
-      ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};
-      for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);
-      ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e};
-      ttq.load=function(e,n){
-        var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;
-        ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};
-        var n=document.createElement("script");
-        n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;
-        var e=document.getElementsByTagName("script")[0];
-        e.parentNode.insertBefore(n,e)
-      };
-      ttq.load('D4BTH9RC77UD5T3PQJMG');
+      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+      ttq.load('D4FRJPBC77UEBGICQPK0');
       ttq.page();
     }(window, document, 'ttq');
   </script>
-  <!-- TikTok Pixel Code End -->
 </head>
 <body>
-  <div class="container">
-    <img src="foto.png" alt="Tutorial de acesso" class="circle-img" />
-    <h1>Obrigado pela sua compra!</h1>
-    <p>Sua compra foi confirmada. Clique abaixo para entrar no grupo VIP exclusivo:</p>
-    <a id="telegram-btn" href="https://t.me/+I-pcyWQm0khmYzYx" class="btn">Entrar no Grupo VIP</a>
+
+  <div class="card">
+    <img src="foto.png" alt="Acesso Confirmado" class="circle-img" />
+    <h1>Obrigado pela compra!</h1>
+    <p>Sua compra foi confirmada com sucesso.<br>Agora você tem acesso total ao grupo VIP exclusivo!</p>
+    
+    <a id="telegram-btn" href="https://t.me/+I-pcyWQm0khmYzYx" class="btn">
+      <span>ENTRAR NO GRUPO VIP</span>
+    </a>
+
+    <div class="footer">
+      Conteúdo +18 • Acesso imediato e vitalício
+    </div>
   </div>
 
-  <!-- TikTok Events API (Server-Side) + Purchase Event -->
+  <!-- API EVENTS + ttclid (MÁXIMO EMQ DO PURCHASE) -->
   <script>
-    const TIKTOK_PIXEL_ID = 'D4BTH9RC77UD5T3PQJMG';
-    const TIKTOK_ACCESS_TOKEN = 'c6846189df517884f032d8de0c15f6172615865c';
-    const API_ENDPOINT = 'https://business-api.tiktok.com/open_api/v1.3/event/track/';
+    const PID = 'D4FRJPBC77UEBGICQPK0';
+    const TOK = 'bf597b03c4b470ca9687deb287f7a7b92b62681e';
+    const API = 'https://business-api.tiktok.com/open_api/v1.3/event/track/';
+    const params = new URLSearchParams(location.search);
+    const ttclid = params.get('ttclid') || '';
 
-    // Função para gerar event_id único
-    function generateEventId(eventName) {
-      return `${eventName}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    }
+    function genId(e) { return `${e}_${Date.now()}_${Math.random().toString(36).substr(2,9)}`; }
 
-    // Função para enviar evento Server-Side
-    async function sendTikTokServerEvent(eventName, properties = {}) {
+    async function send(e, extra = {}) {
+      if (e === 'ViewContent' && localStorage.getItem('purchase_fired_v3')) return;
+      
       const payload = {
-        pixel_code: TIKTOK_PIXEL_ID,
-        event: eventName,
-        event_id: generateEventId(eventName),
+        pixel_code: PID,
+        event: e,
+        event_id: genId(e),
         timestamp: new Date().toISOString(),
         context: {
+          ad: ttclid ? { callback: ttclid } : {},
           user_agent: navigator.userAgent,
-          ip: '',
-          user: {
-            external_id: '',
-            phone_number: '',
-            email: ''
-          },
-          page: {
-            url: window.location.href,
-            referrer: document.referrer || ''
-          }
+          page: { url: location.href }
         },
         properties: {
           content_type: 'product',
-          content_id: 'produto_vip',
-          content_name: 'Acesso VIP - Vazadinhos das Famosas',
+          content_id: 'acesso_vip_001',
+          content_name: 'Acesso VIP Exclusivo',
           currency: 'BRL',
           value: 18.00,
-          ...properties
+          ...extra
         }
       };
 
       try {
-        const response = await fetch(API_ENDPOINT, {
+        await fetch(API, {
           method: 'POST',
-          headers: {
-            'Access-Token': TIKTOK_ACCESS_TOKEN,
-            'Content-Type': 'application/json'
-          },
+          headers: { 'Access-Token': TOK, 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
         });
-
-        const result = await response.json();
-        if (response.ok && result.code === 0) {
-          console.log(`[TikTok Server] ${eventName} enviado com sucesso!`);
-        } else {
-          console.error(`[TikTok Server] Erro ${eventName}:`, result);
-        }
-      } catch (err) {
-        console.error('[TikTok Server] Falha:', err);
-      }
+      } catch(err) {}
     }
 
-    // Dispara eventos apenas UMA VEZ por navegador
-    (function fireEventsOnce() {
-      const PURCHASE_KEY = 'tiktok_purchase_fired_v10'; // Atualizado para evitar conflito
-      if (localStorage.getItem(PURCHASE_KEY)) {
-        console.log('Eventos já disparados anteriormente.');
-        return;
-      }
+    // Dispara apenas uma vez
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        send('ViewContent');
+        send('Purchase', { value: 18.00 });
+        localStorage.setItem('purchase_fired_v3', '1');
+      }, 800);
+    });
 
-      function triggerEvents() {
-        // 1. ViewContent
-        sendTikTokServerEvent('ViewContent');
-
-        // 2. Purchase (Server-Side + Client-Side)
-        sendTikTokServerEvent('Purchase', {
-          value: 18.00,
-          currency: 'BRL'
-        });
-
-        // Client-side (backup)
-        if (typeof ttq === 'object' && typeof ttq.track === 'function') {
-          ttq.track('CompletePayment', {
-            value: 18.00,
-            currency: 'BRL',
-            contents: [{
-              content_id: 'produto_vip',
-              content_type: 'product',
-              content_name: 'Acesso VIP - Vazadinhos das Famosas'
-            }]
-          });
-        }
-
-        localStorage.setItem(PURCHASE_KEY, 'true');
-        console.log('Todos os eventos de compra disparados (Server + Client).');
-      }
-
-      // Aguarda pixel carregar
-      window.addEventListener('load', () => {
-        setTimeout(triggerEvents, 600);
-      });
-    })();
-
-    // 3. CompleteRegistration ao clicar no botão
+    // Clique no botão = CompleteRegistration (EMQ explode)
     document.getElementById('telegram-btn').addEventListener('click', () => {
-      sendTikTokServerEvent('CompleteRegistration', {
-        content_name: 'Entrada no Grupo VIP',
-        value: 18.00
-      });
-
-      if (typeof ttq === 'object') {
-        ttq.track('CompleteRegistration', {
-          content_id: 'produto_vip',
-          value: 18.00,
-          currency: 'BRL'
-        });
-      }
+      send('CompleteRegistration');
+      if (window.ttq) ttq.track('CompleteRegistration');
     });
   </script>
+
 </body>
 </html>
