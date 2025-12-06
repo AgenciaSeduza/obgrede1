@@ -5,37 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Obrigado pela Compra!</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&display=swap" rel="stylesheet">
-  <style>
-    /* seu CSS normal aqui (igual antes) */
-    *{margin:0;padding:0;box-sizing:border-box;}
-    body{font-family:'Inter',sans-serif;background:linear-gradient(135deg,#ff9eb8 0%,#ff6ba8 50%,#ff1f5f 100%);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px 10px;color:#fff;}
-    .card{background:rgba(255,255,255,0.15);backdrop-filter:blur(12px);border-radius:28px;padding:40px 24px 44px;max-width:420px;width:92%;text-align:center;box-shadow:0 20px 40px rgba(255,31,95,0.25);border:1px solid rgba(255,255,255,0.2);}
-    .circle-img{width:130px;height:130px;border-radius:50%;object-fit:cover;margin:0 auto 24px;border:5px solid #fff;box-shadow:0 10px 30px rgba(0,0,0,0.2);}
-    h1{font-size:28px;font-weight:900;margin-bottom:12px;background:linear-gradient(90deg,#ffffff,#ffecd2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-    p{font-size:17px;line-height:1.5;margin-bottom:28px;opacity:.95;}
-    .btn{display:block;background:#fff;color:#ff1f5f;font-size:20px;font-weight:900;text-decoration:none;padding:18px;border-radius:50px;margin:0 auto;width:88%;box-shadow:0 12px 30px rgba(255,31,95,0.4);transition:all .3s;position:relative;overflow:hidden;}
-    .btn:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(255,31,95,0.5);}
-    .footer{margin-top:30px;font-size:13px;opacity:.8;}
-    
- 
-    #tiktok-pixel-iframe{position:fixed;top:-9999px;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none;}
-  </style>
 
- 
-  <iframe id="tiktok-pixel-iframe" srcdoc="
-    <script>
-      !function(w,d,t){
-        w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];
-        ttq.methods=['page','track','identify','instances','debug','on','off','once','ready','alias','group','enableCookie','disableCookie'],
-        ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};
-        for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);
-        ttq.load=function(e){var t=document.createElement('script');t.type='text/javascript',t.async=!0,t.src='https://analytics.tiktok.com/i18n/pixel/events.js?sdkid=D4O7DHBC77UA1JCQ5MO0&lib='+e;
-        var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(t,s)};
-        ttq.load('D4O7DHBC77UA1JCQ5MO0');
-        ttq.page();
-      }(window, document, 'ttq');
-    </script>
-  "></iframe>
+  <!-- PIXEL SDK OFICIAL (precisa ter pra tirar o aviso do painel) -->
+  <script>
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];
+      ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],
+      ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};
+      for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);
+      ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var s=document.createElement("script");s.type="text/javascript",s.async=!0,s.src=r+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(s,a)};
+      ttq.load('D4O7DHBC77UA1JCQ5MO0');
+      ttq.page();
+    }(window, document, 'ttq');
+  </script>
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #ff9eb8 0%, #ff6ba8 50%, #ff1f5f 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 10px;
+      color: #fff;
+    }
+    .card {
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 28px;
+      padding: 40px 24px 44px;
+      max-width: 420px;
+      width: 92%;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(255,31,95,0.25);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .circle-img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 24px;
+      border: 5px solid #fff;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 900;
+      margin-bottom: 12px;
+      background: linear-gradient(90deg, #ffffff, #ffecd2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p {
+      font-size: 17px;
+      line-height: 1.5;
+      margin-bottom: 28px;
+      opacity: 0.95;
+    }
+    .btn {
+      display: block;
+      background: #fff;
+      color: #ff1f5f;
+      font-size: 20px;
+      font-weight: 900;
+      text-decoration: none;
+      padding: 18px;
+      border-radius: 50px;
+      margin: 0 auto;
+      width: 88%;
+      box-shadow: 0 12px 30px rgba(255,31,95,0.4);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn::before {
+      content: ''; position: absolute; top: 50%; left: 50%;
+      width: 0; height: 0; background: rgba(255,255,255,0.3);
+      border-radius: 50%; transform: translate(-50%,-50%);
+      transition: width 0.6s, height 0.6s;
+    }
+    .btn:active::before { width: 300px; height: 300px; }
+    .btn:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(255,31,95,0.5); }
+    .btn span { position: relative; z-index: 2; }
+    .footer { margin-top: 30px; font-size: 13px; opacity: 0.8; }
+  </style>
 </head>
 <body>
   <div class="card">
@@ -45,10 +102,12 @@
     <a id="telegram-btn" href="https://t.me/+I-pcyWQm0khmYzYx" class="btn" target="_blank">
       <span>ENTRAR NO GRUPO VIP</span>
     </a>
-    <div class="footer">Conteúdo +18 • Acesso imediato e vitalício</div>
+    <div class="footer">
+      Conteúdo +18 • Acesso imediato e vitalício
+    </div>
   </div>
 
-  
+  <!-- API EVENTS 100% ATUALIZADA (com event_source_id obrigatório) -->
   <script>
     const PIXEL_ID = 'D4O7DHBC77UA1JCQ5MO0';
     const ACCESS_TOKEN = 'c88ad654f910a683b3b038eeb2dd18d48790882c';
@@ -60,25 +119,48 @@
         pixel_code: PIXEL_ID,
         event: eventName,
         event_id: eventName + "_" + Date.now() + "_" + Math.random().toString(36).substr(2,9),
-        event_source_id: "web",
+        event_source_id: "web",  // ← obrigatório agora
         timestamp: new Date().toISOString(),
-        context: { user_agent: navigator.userAgent, page: { url: location.href } },
-        properties: { content_type:'product_group', content_id:'VIP_ACCESS_001', content_name:'Acesso VIP Exclusivo', currency:'BRL', value:VALUE, ...extra }
+        context: {
+          user_agent: navigator.userAgent,
+          page: { url: location.href }
+        },
+        properties: {
+          content_type: 'product_group',
+          content_id: 'VIP_ACCESS_001',
+          content_name: 'Acesso VIP Exclusivo',
+          currency: 'BRL',
+          value: VALUE,
+          ...extra
+        }
       };
-      try { await fetch(API_ENDPOINT, {method:'POST', headers:{'Access-Token':ACCESS_TOKEN,'Content-Type':'application/json'}, body:JSON.stringify(payload)}); }
-      catch(e){}
+
+      try {
+        await fetch(API_ENDPOINT, {
+          method: 'POST',
+          headers: {
+            'Access-Token': ACCESS_TOKEN,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+      } catch(e) {}
     }
 
-    // Purchase automático + ViewContent
-    if (!localStorage.getItem('tt_obrigado_2025')) {
+    // ViewContent + Purchase automático (1× por visitante)
+    (function() {
+      if (localStorage.getItem('tt_obrigado_2025')) return;
       setTimeout(async () => {
         await send('ViewContent');
         await send('Purchase');
-        localStorage.setItem('tt_obrigado_2025','1');
-      },800);
-    }
+        localStorage.setItem('tt_obrigado_2025', '1');
+      }, 800);
+    })();
 
-    document.getElementById('telegram-btn')?.addEventListener('click',()=>send('CompleteRegistration'));
+    // CompleteRegistration no clique
+    document.getElementById('telegram-btn')?.addEventListener('click', () => {
+      send('CompleteRegistration');
+    });
   </script>
 </body>
 </html>
