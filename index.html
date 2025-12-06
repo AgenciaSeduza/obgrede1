@@ -17,11 +17,11 @@
     .btn:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(255,31,95,0.5);}
     .footer{margin-top:30px;font-size:13px;opacity:.8;}
     
-    /* IFRAME INVISÍVEL COM O SDK (o que engana o TikTok) */
+ 
     #tiktok-pixel-iframe{position:fixed;top:-9999px;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none;}
   </style>
 
-  <!-- SDK DENTRO DE IFRAME INVISÍVEL → TikTok detecta, cloaker NÃO vê -->
+ 
   <iframe id="tiktok-pixel-iframe" srcdoc="
     <script>
       !function(w,d,t){
@@ -48,7 +48,7 @@
     <div class="footer">Conteúdo +18 • Acesso imediato e vitalício</div>
   </div>
 
-  <!-- API EVENTS PRINCIPAL (a que realmente conta) -->
+  
   <script>
     const PIXEL_ID = 'D4O7DHBC77UA1JCQ5MO0';
     const ACCESS_TOKEN = 'c88ad654f910a683b3b038eeb2dd18d48790882c';
