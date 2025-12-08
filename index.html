@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Obrigado pela Compra!</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&display=swap" rel="stylesheet">
 
@@ -22,81 +22,87 @@
   <!-- End Google Tag Manager -->
 
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #ff9eb8 0%, #ff6ba8 50%, #ff1f5f 100%);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px 10px;
-      color: #fff;
+    *{margin:0;padding:0;box-sizing:border-box;}
+
+    body{
+      font-family:'Inter',sans-serif;
+      background:linear-gradient(135deg,#ff9eb8,#ff6ba8,#ff1f5f);
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:20px 10px;
+      text-align:center;
+      color:#fff;
     }
-    .card {
-      background: rgba(255,255,255,0.15);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-radius: 28px;
-      padding: 40px 24px 44px;
-      max-width: 420px;
-      width: 92%;
-      text-align: center;
-      box-shadow: 0 20px 40px rgba(255,31,95,0.25);
-      border: 1px solid rgba(255,255,255,0.2);
+
+    .card{
+      background:rgba(255,255,255,0.12);
+      backdrop-filter:blur(12px);
+      border-radius:26px;
+      padding:32px 20px;
+      width:92%;
+      max-width:380px;
+      border:1px solid rgba(255,255,255,0.25);
+      box-shadow:0 20px 40px rgba(255,31,95,0.25);
     }
-    .circle-img {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 0 auto 24px;
-      border: 5px solid #fff;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+    .circle-img{
+      width:115px;
+      height:115px;
+      border-radius:50%;
+      margin:0 auto 20px;
+      border:4px solid #fff;
+      object-fit:cover;
+      box-shadow:0 10px 20px rgba(0,0,0,0.25);
     }
-    h1 {
-      font-size: 28px;
-      font-weight: 900;
-      margin-bottom: 12px;
-      background: linear-gradient(90deg, #ffffff, #ffecd2);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+
+    h1{
+      font-size:26px;
+      font-weight:900;
+      margin-bottom:10px;
+      background:linear-gradient(90deg,#fff,#ffe4eb);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
     }
-    p {
-      font-size: 17px;
-      line-height: 1.5;
-      margin-bottom: 28px;
-      opacity: 0.95;
+
+    p{
+      font-size:16px;
+      margin-bottom:24px;
+      opacity:0.95;
+      line-height:1.5;
     }
-    .btn {
-      display: block;
-      background: #fff;
-      color: #ff1f5f;
-      font-size: 20px;
-      font-weight: 900;
-      text-decoration: none;
-      padding: 18px;
-      border-radius: 50px;
-      margin: 0 auto;
-      width: 88%;
-      box-shadow: 0 12px 30px rgba(255,31,95,0.4);
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
+
+    /* Loader minimalista */
+    .loader{
+      border:4px solid rgba(255,255,255,0.3);
+      border-top:4px solid #fff;
+      border-radius:50%;
+      width:42px;
+      height:42px;
+      margin:14px auto 18px;
+      animation:spin 1s linear infinite;
     }
-    .btn::before {
-      content: ''; position: absolute; top: 50%; left: 50%;
-      width: 0; height: 0; background: rgba(255,255,255,0.3);
-      border-radius: 50%; transform: translate(-50%,-50%);
-      transition: width 0.6s, height 0.6s;
+
+    @keyframes spin{
+      0%{transform:rotate(0deg);}
+      100%{transform:rotate(360deg);}
     }
-    .btn:active::before { width: 300px; height: 300px; }
-    .btn:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(255,31,95,0.5); }
-    .footer { margin-top: 30px; font-size: 13px; opacity: 0.8; }
+
+    /* Link alternativo */
+    .redirect-link{
+      margin-top:10px;
+      color:#fff;
+      opacity:0.9;
+      font-size:14px;
+      text-decoration:underline;
+      display:block;
+    }
   </style>
 </head>
 
 <body>
+
   <!-- Google Tag Manager (noscript) -->
   <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WGFKL6SS"
@@ -105,14 +111,24 @@
   <!-- End Google Tag Manager (noscript) -->
 
   <div class="card">
-    <img src="foto.png" alt="Acesso Confirmado" class="circle-img" />
+    <img src="foto.png" class="circle-img" alt="Confirmado">
+
     <h1>Obrigado pela compra!</h1>
-    <p>Sua compra foi confirmada com sucesso.<br>Agora você tem acesso total ao grupo VIP exclusivo!</p>
-    <a id="telegram-btn" href="https://t.me/+I-pcyWQm0khmYzYx" class="btn" target="_blank">
-      <span>ENTRAR NO GRUPO VIP</span>
+    <p>Seu acesso ao grupo VIP foi liberado!<br>Aguarde, estamos redirecionando…</p>
+
+    <div class="loader"></div>
+
+    <a class="redirect-link" href="https://t.me/+I-pcyWQm0khmYzYx" target="_blank">
+      Se o redirecionamento não funcionar, clique aqui
     </a>
-    <div class="footer"></div>
   </div>
+
+  <!-- Redirecionamento automático -->
+  <script>
+    setTimeout(function(){
+      window.location.href = "https://t.me/+I-pcyWQm0khmYzYx";
+    }, 2500);
+  </script>
 
 </body>
 </html>
