@@ -4,8 +4,63 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Obrigado pela Compra!</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&display=swap" rel="stylesheet">
 
+  <!-- ✅ TIKTOK PIXEL – 3 CONTAS -->
+  <script>
+  !function (w, d, t) {
+    w.TiktokAnalyticsObject = t;
+    var ttq = w[t] = w[t] || [];
+    ttq.methods = ["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"];
+    ttq.setAndDefer = function(t,e){
+      t[e] = function(){
+        t.push([e].concat(Array.prototype.slice.call(arguments,0)))
+      }
+    };
+    for (var i = 0; i < ttq.methods.length; i++) {
+      ttq.setAndDefer(ttq, ttq.methods[i]);
+    }
+    ttq.instance = function(t){
+      for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++) {
+        ttq.setAndDefer(e, ttq.methods[n]);
+      }
+      return e;
+    };
+    ttq.load = function(e, n){
+      var r = "https://analytics.tiktok.com/i18n/pixel/events.js";
+      ttq._i = ttq._i || {};
+      ttq._i[e] = [];
+      ttq._i[e]._u = r;
+      ttq._t = ttq._t || {};
+      ttq._t[e] = +new Date;
+      ttq._o = ttq._o || {};
+      ttq._o[e] = n || {};
+
+      var s = d.createElement("script");
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = r + "?sdkid=" + e + "&lib=" + t;
+      var x = d.getElementsByTagName("script")[0];
+      x.parentNode.insertBefore(s, x);
+    };
+
+    /* ✅ PIXELS */
+    ttq.load('D4S2ICBC77UE9IMLM8CG'); // CA 1
+    ttq.load('D4S2J3RC77UE9IMLM8DG'); // CA 2
+    ttq.load('D4S2JKRC77U23H9UKP9G'); // CA 3
+
+    /* ✅ PAGE VIEW */
+    ttq.page();
+
+    /* ✅ CONVERSÃO – COMPRA CONCLUÍDA */
+    ttq.track('CompletePayment', {
+      content_name: 'VIP_REDE_SECRETA',
+      currency: 'BRL'
+    });
+
+  }(window, document, 'ttq');
+  </script>
 
   <style>
     *{margin:0;padding:0;box-sizing:border-box;}
@@ -59,7 +114,6 @@
       line-height:1.5;
     }
 
-    /* Loader minimalista */
     .loader{
       border:4px solid rgba(255,255,255,0.3);
       border-top:4px solid #fff;
@@ -75,7 +129,6 @@
       100%{transform:rotate(360deg);}
     }
 
-    /* Link alternativo */
     .redirect-link{
       margin-top:10px;
       color:#fff;
@@ -102,7 +155,7 @@
     </a>
   </div>
 
-  <!-- Redirecionamento automático -->
+  <!-- ✅ REDIRECIONAMENTO -->
   <script>
     setTimeout(function(){
       window.location.href = "https://t.me/+I-pcyWQm0khmYzYx";
